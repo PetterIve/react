@@ -1,4 +1,5 @@
 export interface Dictionary {
+  language: Language;
   greeting: string;
 }
 

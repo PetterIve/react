@@ -1,14 +1,12 @@
 import * as React from 'react';
-import { Dictionary } from '../translation/Dictionary';
+import { useContext } from 'react';
+import { TranslationContext } from '../translation/TranslationContext';
 
-interface NavbarProps {
-  dictionary: Dictionary;
-}
-
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = () => {
+  const translation = useContext(TranslationContext);
   return (
     <nav>
-      {props.dictionary.greeting}
+      {translation.greeting}
     </nav>
   )
-}
+};

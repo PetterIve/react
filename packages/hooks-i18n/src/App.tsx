@@ -1,20 +1,18 @@
 import * as React from 'react';
 import { Navbar } from './navbar/Navbar';
+import { useTranslation } from './translation/LanguageHook';
 import { Language } from './translation/Dictionary';
-import { Norwegian } from './translation/Norwegian';
-import { English } from './translation/English';
+import { TranslationContext } from './translation/TranslationContext';
 
 const App = () => {
-  const [ language, setLanguage ] = React.useState(Language.ENGLISH);
-  const updateLanguage = () => {
-    language === Language.ENGLISH ? setLanguage(Language.NORWEGIAN) : setLanguage(Language.ENGLISH);
-  }
+  const { translation, setLanguage } = useTranslation();
+  const updateLanguage = () => translation.language === Language.ENGLISH ? setLanguage(Language.NORWEGIAN) : setLanguage(Language.ENGLISH)
   return (
-    <div>
-      <Navbar dictionary={language === Language.ENGLISH ? English : Norwegian}/>
-      Test
+    <TranslationContext.Provider value={translation}>
+      <Navbar />
+      This text is not translated
       <button onClick={updateLanguage}>Change language</button>
-    </div>
+    </TranslationContext.Provider>
   )
 };
 
