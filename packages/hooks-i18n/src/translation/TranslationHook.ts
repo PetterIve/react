@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Language } from './Translation';
-import { Norwegian } from './Norwegian';
-import { English } from './English';
+import { Norwegian } from './norwegian/Norwegian';
+import { English } from './english/English';
 
 const findTranslationForLanguage = (language: Language) => {
   switch (language) {

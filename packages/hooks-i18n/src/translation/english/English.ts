@@ -1,4 +1,4 @@
-import { Translation, Language } from './Translation';
+import { Translation, Language } from '../Translation';
 
 export const English: Translation = {
   language: Language.ENGLISH,
