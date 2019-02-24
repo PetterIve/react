@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { Navbar } from './navbar/Navbar';
 import { useTranslation } from './translation/LanguageHook';
-import { Language } from './translation/Dictionary';
 import { TranslationContext } from './translation/TranslationContext';
 
 const App = () => {
-  const { translation, setLanguage } = useTranslation();
-  const updateLanguage = () => translation.language === Language.ENGLISH ? setLanguage(Language.NORWEGIAN) : setLanguage(Language.ENGLISH)
+  const { translation, updateLanguage } = useTranslation();
+
   return (
     <TranslationContext.Provider value={translation}>
       <Navbar />

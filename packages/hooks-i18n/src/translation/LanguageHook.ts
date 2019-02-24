@@ -16,8 +16,9 @@ const dictionaryForLanguage = (language: Language) => {
 
 export const useTranslation = () => {
   const [language, setLanguage] = useState(Language.ENGLISH);
+  const updateLanguage = () => language === Language.ENGLISH ? setLanguage(Language.NORWEGIAN) : setLanguage(Language.ENGLISH)
   return {
     translation: dictionaryForLanguage(language),
-    setLanguage
+    updateLanguage
   }
 };
