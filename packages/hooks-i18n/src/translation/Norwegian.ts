@@ -1,6 +1,6 @@
-import { Dictionary, Language } from './Dictionary';
+import { Translation, Language } from './Translation';
 
-export const Norwegian: Dictionary = {
+export const Norwegian: Translation = {
   language: Language.NORWEGIAN,
   greeting: 'Velkommen'
 }

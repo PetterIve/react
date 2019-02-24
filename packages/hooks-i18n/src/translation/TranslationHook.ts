@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Language } from './Dictionary';
+import { Language } from './Translation';
 import { Norwegian } from './Norwegian';
 import { English } from './English';
 
-const dictionaryForLanguage = (language: Language) => {
+const findTranslationForLanguage = (language: Language) => {
   switch (language) {
     case Language.NORWEGIAN:
       return Norwegian;
@@ -16,9 +16,9 @@ const dictionaryForLanguage = (language: Language) => {
 
 export const useTranslation = () => {
   const [language, setLanguage] = useState(Language.ENGLISH);
-  const updateLanguage = () => language === Language.ENGLISH ? setLanguage(Language.NORWEGIAN) : setLanguage(Language.ENGLISH)
+  const updateLanguage = () => language === Language.ENGLISH ? setLanguage(Language.NORWEGIAN) : setLanguage(Language.ENGLISH);
   return {
-    translation: dictionaryForLanguage(language),
+    translation: findTranslationForLanguage(language),
     updateLanguage
   }
 };

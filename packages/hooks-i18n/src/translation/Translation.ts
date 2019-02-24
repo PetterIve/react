@@ -1,4 +1,4 @@
-export interface Dictionary {
+export interface Translation {
   language: Language;
   greeting: string;
 }

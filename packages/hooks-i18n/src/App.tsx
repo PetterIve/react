@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Navbar } from './navbar/Navbar';
-import { useTranslation } from './translation/LanguageHook';
+import { useTranslation } from './translation/TranslationHook';
 import { TranslationContext } from './translation/TranslationContext';
 
 const App = () => {
