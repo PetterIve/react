@@ -5,10 +5,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "jsx": "react",
-    "lib": [
-      "dom",
-      "es6"
-    ],
+    "lib": ["dom", "es6"],
     "module": "commonjs",
     "noLib": false,
     "paths": {
@@ -17,15 +14,7 @@
     "removeComments": true,
     "strict": true,
     "target": "es5",
-    "types": [
-      "jest",
-      "jest-plugin-context",
-      "node",
-      "sinon-chai"
-    ]
+    "types": ["jest", "jest-plugin-context", "node", "sinon-chai"]
   },
-  "exclude": [
-    "node_modules",
-    "**/*.test.*"
-  ]
+  "exclude": ["node_modules", "**/*.test.*"]
 }

@@ -4,9 +4,5 @@ import { TranslationContext } from '../translation/TranslationContext';
 
 export const Navbar = () => {
   const translation = useContext(TranslationContext);
-  return (
-    <nav>
-      {translation.greeting}
-    </nav>
-  )
+  return <nav>{translation.greeting}</nav>;
 };

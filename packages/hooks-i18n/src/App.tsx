@@ -12,7 +12,7 @@ const App = () => {
       This text is not translated
       <button onClick={updateLanguage}>Change language</button>
     </TranslationContext.Provider>
-  )
+  );
 };
 
 export default App;
