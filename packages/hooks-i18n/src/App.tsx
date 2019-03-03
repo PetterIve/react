@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Navbar } from './navbar/Navbar';
-import { useTranslation } from './translation/TranslationHook';
-import { TranslationContext } from './translation/TranslationContext';
+import * as React from "react";
+import { Navbar } from "./navbar/Navbar";
+import { useTranslation } from "./translation/TranslationHook";
+import { TranslationContext } from "./translation/TranslationContext";
 
 const App = () => {
   const { translation, updateLanguage } = useTranslation();
